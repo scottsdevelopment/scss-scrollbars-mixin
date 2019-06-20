@@ -1,0 +1,16 @@
+@mixin scrollbar($width, $height, $color-foreground, $color-background) {
+  ::-webkit-scrollbar {
+    width: $width;
+    height: $height;
+    &-thumb {
+        background: $color-foreground;
+    }
+    &-track {
+        background: $color-background;
+    }
+  }
+  body {
+    scrollbar-face-color: $color-foreground;
+    scrollbar-track-color: $color-background;
+  }
+}
